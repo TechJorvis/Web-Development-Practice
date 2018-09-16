@@ -1,3 +1,11 @@
+body {
+    background: url("unsplash-cat.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Lato', sans-serif;
+}
+
 #content {
-    align-content: center;
+    text-align: center;
+    padding-top: 25%;
 }
