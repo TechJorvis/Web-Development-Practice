@@ -10,7 +10,7 @@ function todoListApp() {
         // Add the given task to the todo list
         todos.push(task);
         // Print the status
-        console.log("Status: " + task + " was added to the todo list");
+        console.log("Status: \"" + task + "\" was added to the todo list");
     }
     // End of function addToDo
 
@@ -18,13 +18,17 @@ function todoListApp() {
      * To view all the tasks listed in the todos array
      */
     function viewToDo() {
-        // Print the todo list
-        console.log("ToDo List: ");
-        console.log("========================");
-        for (let i = 0; i < todos.length; i++) {
-            console.log(i + ") " + todos[i]);
+        if (todos.length > 0) {
+            // Print the todo list
+            console.log("ToDo List: ");
+            console.log("========================");
+            for (let i = 0; i < todos.length; i++) {
+                console.log(i + ") " + todos[i]);
+            }
+            console.log("========================");
+        } else {
+            console.log("There are no tasks for the day :)");
         }
-        console.log("========================");
     }
     // End of function viewToDo
 
@@ -39,7 +43,7 @@ function todoListApp() {
             // Remove the specified todo from the todo list
             todos.splice(todo_index, 1);
             // Print the status
-            console.log("Status: Removed " + task + " from the todo list");
+            console.log("Status: Removed \"" + task + "\" from the todo list");
         } else {
             // Print the status
             console.log("Status: Given task not found in the todo list");
@@ -51,7 +55,7 @@ function todoListApp() {
         // Take the input from the user
         usr_input = window.prompt("Enter the task you want to perform: ");
         if (usr_input) {
-            console.log("User entered " + usr_input + " task to be performed");
+            console.log("User entered \"" + usr_input + "\" task to be performed");
 
             if (usr_input.toLowerCase() == "new") {
                 // Input the new task to be added to the todo list
