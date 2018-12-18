@@ -10,7 +10,7 @@ function todoListApp() {
         // Add the given task to the todo list
         todos.push(task);
         // Print the status
-        console.log("Status: " + task + "was added to the todo list");
+        console.log("Status: " + task + " was added to the todo list");
     }
     // End of function addToDo
 
@@ -33,7 +33,7 @@ function todoListApp() {
      * @param {number} todo_index - index of the todo to be removed
      */
     function removeToDo(todo_index) {
-        if (todo_index > -1) {
+        if (todo_index > -1 && todo_index < todos.length) {
             // Store the todo to be deleted
             let task = todos[todo_index];
             // Remove the specified todo from the todo list
@@ -51,12 +51,14 @@ function todoListApp() {
         // Take the input from the user
         usr_input = window.prompt("Enter the task you want to perform: ");
         if (usr_input) {
+            console.log("User entered " + usr_input + " task to be performed");
+
             if (usr_input.toLowerCase() == "new") {
                 // Input the new task to be added to the todo list
                 let new_task = window.prompt("Enter the new task: ");
                 // Add the new task to the todo list
                 addToDo(new_task);
-            } else if (usr_input.toLowerCase() == "view") {
+            } else if (usr_input.toLowerCase() == "list") {
                 // Display the todo list
                 viewToDo();
             } else if (usr_input.toLowerCase() == "delete") {
@@ -64,7 +66,12 @@ function todoListApp() {
                 let todo_index = window.prompt("Enter the index of the todo");
                 // Remove the specified todo from the list
                 removeToDo(todo_index)
+            } else {
+                console.log("User entered invalid task");
             }
+        }
+        else {
+            console.log("User didn't entered any choice :(");
         }
     } while (usr_input != null && usr_input != "quit");
     console.log("User Quit Successfully!");
