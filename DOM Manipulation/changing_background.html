@@ -6,5 +6,21 @@
     <body>
         <h1>Background Color Change</h1>
         <p>Background will change every 2 seconds</p>
+
+        <script type="text/javascript">
+            // Select the body
+            let body = document.querySelector("body");
+            // Create a boolean to keep alternating the color
+            let isBlue = false;
+            // Changing the color alternatively
+            setInterval(function() {
+                if (isBlue) {
+                    body.style.background = "white";
+                } else {
+                    body.style.background = "powderblue";
+                }
+                isBlue = !isBlue;
+            }, 2000);
+        </script>
     </body>
 </html>
