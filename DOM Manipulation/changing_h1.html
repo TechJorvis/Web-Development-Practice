@@ -4,6 +4,16 @@
         <title>Changing H1 Color</title>
     </head>
     <body>
-        <h1>Heading Color Will Every Second</h1>
+        <h1>Heading Color Will Change After 2 Seconds</h1>
+
+        <script type="text/javascript">
+            // Select the h1 element
+            let h1 = document.querySelector("h1");
+
+            // Change the color
+            setTimeout(function() {
+                h1.style.color = "blue";
+            }, 2000);
+        </script>
     </body>
 </html>
