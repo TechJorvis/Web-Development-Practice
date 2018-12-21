@@ -22,7 +22,7 @@
                 <img id="img-holder" class="thumbnail" src="goku.png" alt="Goku - An anime character from Dragon Ball Series">
             </td>
             <td>
-                <button type="button" onclick="">Next</button>
+                <button type="button" onclick="loadNextImg()">Next</button>
             </td>
         </tr>
     </table>
@@ -59,6 +59,30 @@
             img.setAttribute("alt", alt);
         }
         // End of function loadPreviousImg
+
+        function loadNextImg() {
+            // Get the img tag
+            let img = document.getElementById("img-holder");
+
+            let src = ""
+            let alt = ""
+            if (index < imgs.length - 1) {
+                index++;
+            } else {
+                index = 0;
+            }
+
+            // Set the src value
+            src = imgs[index][0];
+            // Set the alt value
+            alt = imgs[index][1];
+
+            // Set the src attribute
+            img.setAttribute("src", src);
+            // Set the alt attribute
+            img.setAttribute("alt", alt);
+        }
+        // End of function loadNextImg
     </script>
 </body>
 
