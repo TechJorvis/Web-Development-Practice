@@ -16,7 +16,7 @@
     <table cellpadding="20px">
         <tr>
             <td>
-                <button type="button" onclick="">Previous</button>
+                <button type="button" onclick="loadPreviousImg()">Previous</button>
             </td>
             <td>
                 <img id="img-holder" class="thumbnail" src="goku.png" alt="Goku - An anime character from Dragon Ball Series">
@@ -26,6 +26,40 @@
             </td>
         </tr>
     </table>
+
+    <script>
+        var imgs = [["goku.png", "Goku - An anime character from Dragon Ball Series"],
+                    ["killua.jpg", "Killua - An anime character from HunterxHunter Series"],
+                    ["natsu.jpg", "Natsu - An anime character from Fairy Tail Series"]];
+        var index = 0;
+
+        function loadPreviousImg() {
+            // Get the img tag
+            let img = document.getElementById("img-holder");
+
+            let src = "";
+            let alt = "";
+            if (index == 0) {
+                index = imgs.length - 1;
+                // Set the src value
+                src = imgs[index][0];
+                // Set the alt value
+                alt = imgs[index][1];
+            } else if (index > 0) {
+                index--;
+                // Set the src value
+                src = imgs[index][0];
+                // Set the alt value
+                alt = imgs[index][1];
+            }
+
+            // Set the src attribute
+            img.setAttribute("src", src);
+            // Set the alt attribute
+            img.setAttribute("alt", alt);
+        }
+        // End of function loadPreviousImg
+    </script>
 </body>
 
 </html>
