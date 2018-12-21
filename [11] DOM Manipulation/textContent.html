@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>textContent Demo</title>
+    </head>
+    <body>
+        <h1>textContent Demo</h1>
+        <p id="text">This is some <strong>strong</strong> text.</p>
+        <button type="button" onclick="changeText()">Click Me To Change Text</button>
+
+        <script type="text/javascript">
+            function changeText() {
+                // Get the paragraph tag
+                let p_tag = document.getElementById("text");
+                // Store <p> tag current data
+                let current_data = p_tag.textContent;
+                console.log("Current Text: " + current_data);
+                // Change the <p> tag text
+                p_tag.textContent = "This is new text.";
+            }
+        </script>
+    </body>
+</html>
