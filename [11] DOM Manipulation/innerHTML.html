@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>innerHTML Demo</title>
+    </head>
+    <body>
+        <h1>innerHTML Demo</h1>
+        <p id="text">This is some <strong>strong</strong> text.</p>
+        <button type="button" onclick="changeText()">Click Me Change Text</button>
+
+        <script type="text/javascript">
+            function changeText() {
+                // Get the <p> tag
+                let p = document.getElementById("text");
+                // Store the current text of the <p> tag
+                let current_text = p.innerHTML;
+                console.log("Current Text: " + current_text);
+                // Change the <p> tag text
+                p.innerHTML = "This is new text.";
+            }
+        </script>
+    </body>
+</html>
