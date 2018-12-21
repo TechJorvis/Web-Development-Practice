@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Event Listener Demo</title>
+    </head>
+    <body>
+        <button type="button">Click Me</button>
+        <p>No One Has Clicked Me Yet</p>
+
+        <script type="text/javascript">
+            var button = document.querySelector("button");
+            var p = document.querySelector("p");
+
+            //Setup Click Listener
+            button.addEventListener("click", function() {
+                p.textContent = "Someone Clicked the Button!";
+            });
+        </script>
+    </body>
+</html>
