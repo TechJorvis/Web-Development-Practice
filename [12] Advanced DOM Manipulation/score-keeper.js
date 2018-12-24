@@ -41,3 +41,24 @@ player1.addEventListener("click", function() {
         }
     }
 });
+
+// Get the player-2 score viewer
+var player2_scoreViewer = document.getElementById("player-2-score");
+
+// Get the player-2 score update button
+var player2 = document.getElementById("player-2");
+
+// Setup player-2 score update listener
+player2.addEventListener("click", function() {
+    if (player2_score + 1 <= goal_score) {
+        // Increment the player-2 score variable
+        player2_score += 1;
+
+        // Update the player-2 score on the screen
+        player2_scoreViewer.textContent = player2_score;
+
+        if (player2_score == goal_score) {
+            player2_scoreViewer.style.color = "orange";
+        }
+    }
+});
