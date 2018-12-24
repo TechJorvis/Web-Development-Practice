@@ -13,13 +13,20 @@
         <!-- Score Table -->
         <table id="score-table">
             <tr>
-                <td><h1 id="player-1">0</h1></td>
+                <td><h1 id="player-1-score">0</h1></td>
                 <td><h2>to</h2></td>
-                <td><h1 id="player-2">0</h1></td>
+                <td><h1 id="player-2-score">0</h1></td>
             </tr>
         </table>
 
+        <!-- Goal Score -->
+        <p>You are playing to: <label id="goal-score-display">5</label></p>
 
+        <!-- Score Update Control -->
+        <input type="number" id="goal-score-input" value="5" min="1">
+        <button id="player-1" type="button">Player 1</button>
+        <button id="player-2" type="button">Player 2</button>
+        <button id="reset-score" type="reset">Reset</button>
 
         <!-- Script -->
         <script type="text/javascript" src="score-keeper.js"></script>
