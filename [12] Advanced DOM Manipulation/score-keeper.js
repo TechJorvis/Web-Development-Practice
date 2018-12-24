@@ -62,3 +62,34 @@ player2.addEventListener("click", function() {
         }
     }
 });
+
+// Get the reset score button
+var resetScoreBtn = document.getElementById("reset-score");
+
+// Setup click listener
+resetScoreBtn.addEventListener("click", function() {
+    console.log("Resetting Scores...");
+
+    // Reset Player 1 score
+    player1_score = 0;
+    // Update Player 1 score on the screen
+    player1_scoreViewer.textContent = player1_score;
+    // Reset the color of score
+    player1_scoreViewer.style.color = "black";
+
+    // Reset the Player 2 score
+    player2_score = 0;
+    // Update Player 2 score on the screen
+    player2_scoreViewer.textContent = player2_score;
+    // Reset the color of score
+    player2_scoreViewer.style.color = "black";
+
+    // Reset the goal score
+    goal_score = 5;
+    // Update the goal score on the screen
+    goalScoreViewer.textContent = goal_score;
+    // Update the goal score in the goal score input box
+    goalScoreSetter.value = goal_score;
+
+    console.log("Resetting Complete!");
+});
