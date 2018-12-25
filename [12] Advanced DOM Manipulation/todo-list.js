@@ -29,6 +29,11 @@ addTodoButton.addEventListener("click", function() {
         this.classList.add("mouse-over");
     });
 
+    // Setup mouse-out listener on li
+    list_item.addEventListener("mouseout", function() {
+        this.classList.remove("mouse-over");
+    });
+
     // Append the li tag to the list
     ol.appendChild(list_item);
 });
