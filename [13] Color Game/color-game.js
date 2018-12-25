@@ -9,7 +9,7 @@ var colors = [
 
 var squares = document.querySelectorAll(".square");
 
-var pickedColor = colors[3];
+var pickedColor = pickColor();
 
 var colorDisplay = document.getElementById("color-display");
 
@@ -27,10 +27,23 @@ for (var i = 0; i < squares.length; i++) {
         if (clickedColor === pickedColor) {
             messageDisplay.textContent = "Correct!";
             messageDisplay.style.color = "white";
+
+            changeColor(clickedColor);
         } else {
             this.style.backgroundColor = "#232323";
             messageDisplay.textContent = "Try Again :(";
             messageDisplay.style.color = "white";
         }
     });
+}
+
+function changeColor(color) {
+    for (let i = 0; i < squares.length; i++) {
+        squares[i].style.backgroundColor = color;
+    }
+}
+
+function pickColor() {
+    let random_index = Math.floor(Math.random() * colors.length);
+    return colors[random_index];
 }
