@@ -20,9 +20,14 @@ addTodoButton.addEventListener("click", function() {
     todo_count += 1;
 
     // Create a unique id
-    let todo_id = "todoID-" + todo_count;
+    let todo_id = "todo-" + todo_count;
     // Assign a unique id to the todo
     list_item.setAttribute("id", todo_id);
+
+    // Setup mouse-over listener on li
+    list_item.addEventListener("mouseover", function() {
+        this.classList.add("mouse-over");
+    });
 
     // Append the li tag to the list
     ol.appendChild(list_item);
