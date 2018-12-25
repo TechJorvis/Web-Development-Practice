@@ -1,3 +1,15 @@
 .medium-button {
     font-size: 16px;
 }
+
+.mouse-over {
+    color: crimson;
+}
+
+.mouse-out {
+    color: black;
+}
+
+.todo-completed {
+    text-decoration: line-through;
+}
