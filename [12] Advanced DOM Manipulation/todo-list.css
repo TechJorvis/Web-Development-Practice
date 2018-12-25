@@ -6,10 +6,6 @@
     color: crimson;
 }
 
-.mouse-out {
-    color: black;
-}
-
 .todo-completed {
     text-decoration: line-through;
 }

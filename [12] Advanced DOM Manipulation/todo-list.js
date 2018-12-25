@@ -34,6 +34,11 @@ addTodoButton.addEventListener("click", function() {
         this.classList.remove("mouse-over");
     });
 
+    // Setup click listener on li
+    list_item.addEventListener("click", function() {
+        this.classList.toggle("todo-completed");
+    });
+
     // Append the li tag to the list
     ol.appendChild(list_item);
 });
