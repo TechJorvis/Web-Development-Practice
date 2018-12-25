@@ -42,3 +42,43 @@ addTodoButton.addEventListener("click", function() {
     // Append the li tag to the list
     ol.appendChild(list_item);
 });
+
+// Get the delete todo button
+var deleteTodoButton = document.getElementById("delete-todo");
+
+// Setup click listener on the todo button
+deleteTodoButton.addEventListener("click", function() {
+    // Ask the user to input the todo number to be deleted
+    let item_nbr = parseInt(window.prompt("Enter the number of the todo to be removed"));
+
+    if (item_nbr > 0 && item_nbr <= todo_count) {
+        // Create the Id of the todo
+        let todo_id = "todo-" + item_nbr;
+        // Get the todo
+        let list_item = document.getElementById(todo_id);
+
+        // Remove the todo from the list
+        ol.removeChild(list_item);
+
+        // Update the id's of the todo's after the given todo (if any)
+        let todo_item, current_todo_nbr, new_todo_nbr;
+        for (let i = item_nbr; i < todo_count; i++) {
+            // Current todo number
+            current_todo_nbr = i + 1;
+            // Current todo id
+            todo_id = "todo-" + current_todo_nbr;
+            // Get the todo item
+            todo_item = document.getElementById(todo_id);
+
+            // Create the new todo number
+            new_todo_nbr = i;
+            // Update the id
+            todo_item.id = "todo-" + new_todo_nbr;
+        }
+
+        // Decrement the total todo count
+        todo_count -= 1;
+    } else {
+        window.alert("Given Item Number Does not Exist");
+    }
+});
