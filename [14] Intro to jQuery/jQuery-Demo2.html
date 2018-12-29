@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Demo</title>
+        <script src="jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+        <h1>jQuery Demo 2</h1>
+        <p>In jQuery, in .css() method you can pass an object to change multiple style attributes at once.</p>
+
+        <script>
+            function changeHeadingStyles() {
+                let styles = {
+                    color : "red",
+                    backgroundColor : "pink",
+                };
+
+                $("h1").css(styles);
+            }
+
+            // Change heading style in 3 secs
+            setTimeout(changeHeadingStyles, 3000);
+        </script>
+    </body>
+</html>
