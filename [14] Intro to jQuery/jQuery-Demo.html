@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Demo</title>
+        <!-- jQuery -->
+        <script src="jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+        <h1>jQuery</h1>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <script>
+            function changeHeadingColor() {
+                $("h1").css("color", "blue");   // jQuery method
+                /* document.querySelector("h1").style.color = "blue" */     // normal javascript method
+            }
+
+            // Change color of heading after 3 secs
+            setTimeout(changeHeadingColor, 3000);
+        </script>
+    </body>
+</html>
