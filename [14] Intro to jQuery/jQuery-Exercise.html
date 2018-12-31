@@ -10,7 +10,7 @@
         <h1>jQuery Exercise</h1>
         <hr>
         <div>Div 1</div>
-        <div class="highlight"Div 2></div>
+        <div class="highlight">Div 2</div>
         <div id="third">Div 3</div>
         <div class="highlight">Div 4</div>
 
@@ -24,12 +24,17 @@
             }
 
             function solution3() {
-                $("#third").css("borderColor", "orange");
+                $("#third").css("border", "4px solid orange");
             }
 
             function bonusQuestionSolution() {
-                $("div")[0].css("fontColor", "pink");
+                $("div:first-of-type").css("color", "pink");
             }
+
+            setTimeout(solution1, 1000);
+            setTimeout(solution2, 2000);
+            setTimeout(solution3, 3000);
+            setTimeout(bonusQuestionSolution, 4000);
         </script>
     </body>
 </html>
