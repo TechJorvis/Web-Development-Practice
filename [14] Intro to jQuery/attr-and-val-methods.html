@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Methods</title>
+
+        <!-- Internal CSS -->
+        <style>
+            .strong-text {
+                font-weight: bold;
+            }
+
+            .italic-blue-text {
+                color: blue;
+                font-style: italic;
+            }
+        </style>
+
+        <!-- jQuery -->
+        <script src="jquery-3.3.1.min.js"></script>
+    </head>
+
+    <body>
+        <h1>jQuery Methods - attr and val</h1>
+        <hr>
+
+        <h2>attr() Demo</h2>
+        <p id="p1">This text will become strong</p>
+        <p id="p2">This text will become italic and blue in color</p>
+        <hr>
+
+        <h2>val() Demo</h2>
+        <input type="text"><button onclick="valDemo()">Submit</button>
+        <p id="inp-placeholder"></p>
+
+        <!-- Script -->
+        <script type="text/javascript">
+            function attrDemo() {
+                $("#p1").attr("class", "strong-text");
+
+                setTimeout(function() {
+                    $("#p2").attr("class", "italic-blue-text");
+                }, 2000);
+            }
+
+            setTimeout(attrDemo, 2000);
+
+            function valDemo() {
+                /**
+                 * val() method is equivalent of .value in javascript
+                 */
+                let usr_input = $("input").val();
+
+                $("#inp-placeholder").text(usr_input);
+            }
+        </script>
+    </body>
+</html>
