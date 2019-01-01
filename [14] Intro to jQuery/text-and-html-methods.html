@@ -19,10 +19,24 @@
 
         <script type="text/javascript">
             function textDemo() {
+                /**
+                 * text() method of jQuery is equivalent of textContent in javascript
+                 */
+                console.log("text() Demo");
+                console.log($("ul").text());
+                console.log($("li").text());
+
+                $("li").text("Dragon <strong>li</strong> text()")
+                //$("ul").text("Dragon <strong>ul</strong> text()");
+
+                $("#text-demo").text("This text was <strong>added</strong> by text() method");
             }
 
             function htmlDemo() {
+
             }
+
+            setTimeout(textDemo, 2000);
         </script>
     </body>
 </html>
