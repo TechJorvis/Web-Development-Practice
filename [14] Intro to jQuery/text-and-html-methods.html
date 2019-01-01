@@ -9,12 +9,18 @@
     <body>
         <h1>jQuery Methods - text() and html()</h1>
         <hr>
-        <ul>
+        <ul id="list1">
             <li>Dragon Ball</li>
-            <li>Dragon Ball Z</li>
-            <li>Dragon Ball Super</li>
+            <li>Dragon Ball <strong>Z</strong></li>
+            <li>Dragon Ball <strong>Super</strong></li>
         </ul>
         <p id="text-demo"></p>
+
+        <ul id="list2">
+            <li>Dragon Ball</li>
+            <li>Dragon Ball <strong>Z</strong></li>
+            <li>Dragon Ball <strong>Super</strong></li>
+        </ul>
         <p id="html-demo"></p>
 
         <script type="text/javascript">
@@ -23,20 +29,37 @@
                  * text() method of jQuery is equivalent of textContent in javascript
                  */
                 console.log("text() Demo");
-                console.log($("ul").text());
-                console.log($("li").text());
+                console.log($("#list1").text());
+                console.log($("#list1 li").text());
 
-                $("li").text("Dragon <strong>li</strong> text()")
-                //$("ul").text("Dragon <strong>ul</strong> text()");
+                setTimeout(function() {
+                    $("#list1 li").text("Dragon <strong>li</strong> text()");
+                }, 1000);
+                setTimeout(function() {
+                    $("#list1").text("Dragon <strong>ul</strong> text()");
+                }, 2000);
 
                 $("#text-demo").text("This text was <strong>added</strong> by text() method");
             }
 
             function htmlDemo() {
+                /**
+                 * html() method of jQuery is equivalent to innerHTML of javascript
+                 */
+                console.log("html() Demo");
+                console.log($("#list2").html());
+                console.log($("#list2 li").html());
 
+                setTimeout(function() {
+                    $("#list2 li").html("Dragon <strong>li</strong> text()");
+                }, 1000);
+                setTimeout(function() {
+                    $("#list2").html("Dragon <strong>ul</strong> text()");
+                }, 2000);
             }
 
             setTimeout(textDemo, 2000);
+            setTimeout(htmlDemo, 5000);
         </script>
     </body>
 </html>
