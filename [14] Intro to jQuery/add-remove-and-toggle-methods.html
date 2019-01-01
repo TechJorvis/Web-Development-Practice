@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Methods</title>
+
+        <!-- Internal CSS -->
+        <style>
+            .heading-style {
+                color : crimson;
+            }
+
+            .list-style {
+                font-style: italic;
+                text-decoration: underline;
+                text-transform: capitalize;
+            }
+
+            .list-style-2 {
+                text-decoration: line-through;
+            }
+        </style>
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    </head>
+
+    <body>
+        <h1>jQuery Methods - addClass(), removeClass() and toggleClasss()</h1>
+        <hr>
+
+        <h2>addClass() Demo</h2>
+        <h3 id="sample-heading-1">This Heading will get Styled</h3>
+        <ul id="sample-list-1">
+            <li>task 1</li>
+            <li>task 2</li>
+            <li>task 3</li>
+        </ul>
+
+        <hr>
+
+        <h2>removeClass() Demo</h2>
+        <h3 id="sample-heading-2" class="heading-style">This Heading's class will get removed</h3>
+        <ul id="sample-list-2">
+            <li class="list-style">styled list will become normal</li>
+        </ul>
+
+        <hr>
+
+        <h2>toggleClasss() Demo</h2>
+        <ul id="sample-list-3">
+            <li class="list-style-2">Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li>
+        </ul>
+
+        <!-- Script -->
+        <script type="text/javascript">
+            function addClassDemo() {
+                /**
+                 * addClass() method is equivalent of
+                 * document.getElementById().classList.add()
+                 */
+
+                $("#sample-heading-1").addClass("heading-style");
+
+                setTimeout(function() {
+                    $("#sample-list-1 li").addClass("list-style");
+                }, 1000);
+            }
+
+            function removeClassDemo() {
+                /**
+                 * removeClass() method is equivalent of
+                 * document.getElementById().classList.remove()
+                 */
+
+                $("#sample-heading-2").removeClass("heading-style");
+
+                setTimeout(function() {
+                    $("#sample-list-2 li").removeClass("list-style");
+                }, 1000);
+            }
+
+            function toggleClassDemo() {
+                /**
+                 * toggleClass() method is equivalent of
+                 * document.getElementById().classList.toggle()
+                 */
+
+                $("#sample-list-3 li").toggleClass("list-style-2");
+            }
+
+            setTimeout(addClassDemo, 2000);
+            setTimeout(removeClassDemo, 4000);
+            setTimeout(toggleClassDemo, 6000);
+        </script>
+    </body>
+</html>
