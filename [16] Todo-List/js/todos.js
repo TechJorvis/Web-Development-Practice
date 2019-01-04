@@ -20,7 +20,9 @@ $("li").click(function() {
 
 // Click on X to delete the todo
 $("span").click(function(event) {
-    $(this).parent().remove();
+    $(this).parent().fadeOut(500, function() {
+        $(this).remove();
+    });
 
     event.stopPropagation();    /* To stop the bubble effect */
 });
