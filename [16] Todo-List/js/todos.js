@@ -17,3 +17,10 @@ $("li").click(function() {
     //     });
     // }
 });
+
+// Click on X to delete the todo
+$("span").click(function(event) {
+    $(this).parent().remove();
+
+    event.stopPropagation();    /* To stop the bubble effect */
+});
