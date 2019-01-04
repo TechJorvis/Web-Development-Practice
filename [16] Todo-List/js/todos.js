@@ -26,3 +26,14 @@ $("span").click(function(event) {
 
     event.stopPropagation();    /* To stop the bubble effect */
 });
+
+$("input[type='text']").keypress(function(event) {
+    if (event.which === 13) {
+        // Store the new todo given
+        let todo = $(this).val();
+        // Clear the input box
+        $(this).val("");
+        // Create a new li and add to ul
+        $("ul").append("<li><span>X</span> " + todo + "</li>");
+    }
+});
