@@ -34,6 +34,6 @@ $("input[type='text']").keypress(function(event) {
         // Clear the input box
         $(this).val("");
         // Create a new li and add to ul
-        $("ul").append("<li><span>X</span> " + todo + "</li>");
+        $("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todo + "</li>");
     }
 });
