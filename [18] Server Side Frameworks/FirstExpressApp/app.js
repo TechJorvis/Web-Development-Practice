@@ -18,6 +18,12 @@ app.get("/dog", function(req, res) {
     res.send("MEOW!");
 });
 
+app.get("/r/:subReddit", function(req, res) {
+    let subReddit = req.params.subReddit;
+    //console.log(req);
+    res.send("YOU ARE ON " + subReddit + " SUBREDDIT")
+});
+
 // If invalid page is requested
 app.get("*", function(req, res) {
     res.send("PAGE NOT FOUND");
