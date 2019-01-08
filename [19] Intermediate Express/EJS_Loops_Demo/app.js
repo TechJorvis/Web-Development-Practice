@@ -13,6 +13,8 @@ app.get("/posts", function(req, res) {
         {title: "Java", author: "Johsh"},
         {title: "NodeJS", author: "Ben"}
     ];
+
+    res.render("posts.ejs", {posts: posts});
 });
 
 app.listen(3000, ip.address, function() {

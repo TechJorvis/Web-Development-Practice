@@ -1,0 +1,13 @@
+<h1>Computer Science Posts</h1>
+
+<% for (let i = 0; i < posts.length; i++) { %>
+    <li>
+        Title: <%= posts[i].title%> - Author: <%= posts[i].author%>
+    </li>
+<% } %>
+
+<% posts.forEach(function(post) { %>
+    <li>
+        Title: <%= post.title%> - Author: <%= posts.author%>
+    </li>
+<% }); %>
