@@ -1,0 +1,11 @@
+<h1>Anime: <%= anime_name%></h1>
+
+<% if (anime_name.toLowerCase() === "dragonball") { %>
+    <h2>Anime Type: Material Arts</h2>
+<% } else if (anime_name.toLowerCase() === "boruto") { %>
+    <h2>Anime Type: Ninja</h2>
+<% } else if (anime_name.toLowerCase() === "fairy-tail") { %>
+    <h2>Anime Type: Magic</h2>
+<% } else { %>
+    <h2>No Anime With Given Name Found :(</h2>
+<% } %>
