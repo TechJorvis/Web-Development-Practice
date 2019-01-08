@@ -9,6 +9,7 @@
   "author": "Ayush",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "ip": "^1.1.5"
   }
 }
