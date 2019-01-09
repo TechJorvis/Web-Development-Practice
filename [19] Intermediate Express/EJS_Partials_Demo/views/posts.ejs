@@ -1,0 +1,11 @@
+<% include partials/header %>
+
+<h1>Anime Posts</h1>
+
+<% anime_list.forEach(function(anime) { %>
+    <li>
+        <strong><%= anime.name %></strong> ( <%= anime.type %> )
+    </li>
+<% });%>
+
+<% include partials/footer %>
