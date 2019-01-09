@@ -11,9 +11,9 @@ app.get("/", function(req, res) {
 
 app.get("/posts", function(req, res) {
     let anime_list = [
-        {anime: "boruto", type: "ninja"},
-        {anime: "dragon ball", type: "martial arts"},
-        {anime: "fairy tail", type: "magic/adventure"}
+        {name: "boruto", type: "ninja"},
+        {name: "dragon ball", type: "martial arts"},
+        {name: "fairy tail", type: "magic/adventure"}
     ];
 
     res.render("posts", {anime_list: anime_list});
