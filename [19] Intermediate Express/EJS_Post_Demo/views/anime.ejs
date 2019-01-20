@@ -3,3 +3,8 @@
 <% anime_list.forEach(function(anime) { %>
     <li><%= anime %></li>
 <%}); %>
+
+<form action="/addAnime" method="POST">
+    <input type="text" name="newAnime" placeholder="anime-name">
+    <button>Add Anime</button>
+</form>
