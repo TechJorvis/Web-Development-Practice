@@ -10,7 +10,8 @@ app.get("/", function(req, res) {
 });
 
 app.get("/anime", function(req, res) {
-    res.render("anime")
+    var anime = ['boruto', 'dragon ball', 'dragon ball z', 'dragon ball super', 'dragon ball gt'];
+    res.render("anime", {anime_list: anime});
 });
 
 app.listen(3000, ip.address, function() {
