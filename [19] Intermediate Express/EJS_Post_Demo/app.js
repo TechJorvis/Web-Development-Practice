@@ -1,5 +1,6 @@
 var express = require('express');
 var ip = require('ip');
+var bodyParser = require('body-parser');
 
 var app = express();
 
@@ -10,6 +11,7 @@ app.get("/", function(req, res) {
 });
 
 app.post("/addAnime", function(req, res) {
+    console.log(req.body);
     res.send("You have reached the post route");
 });
 
