@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
+app.use(bodyParser.urlencoded({extended: true}));
+
 app.set("view engine", "ejs");
 
 app.get("/", function(req, res) {
@@ -11,7 +13,7 @@ app.get("/", function(req, res) {
 });
 
 app.post("/addAnime", function(req, res) {
-    console.log(req.body);
+    let newAnime = req.body.newAnime;
     res.send("You have reached the post route");
 });
 
