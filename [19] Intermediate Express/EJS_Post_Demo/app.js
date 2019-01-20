@@ -9,6 +9,10 @@ app.get("/", function(req, res) {
     res.render("home");
 });
 
+app.post("/addAnime", function(req, res) {
+    res.send("You have reached the post route");
+});
+
 app.get("/anime", function(req, res) {
     var anime = ['boruto', 'dragon ball', 'dragon ball z', 'dragon ball super', 'dragon ball gt'];
     res.render("anime", {anime_list: anime});
