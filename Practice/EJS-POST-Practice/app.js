@@ -6,7 +6,7 @@ const app = express();
 app.set("view engine", "ejs");
 
 app.get("/", function(req, res) {
-    res.send("Working!");
+    res.render("index");
 });
 
 // Start the server
