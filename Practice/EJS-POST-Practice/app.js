@@ -27,7 +27,9 @@ app.post("/addUser", function(req, res) {
     users.push(new_user)
     //console.log(users);
 
+    console.log("New User Added!");
 
+    res.redirect("/");
 });
 
 // Start the server
