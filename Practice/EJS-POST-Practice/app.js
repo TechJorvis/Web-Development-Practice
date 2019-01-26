@@ -32,6 +32,9 @@ app.post("/addUser", function(req, res) {
     res.redirect("/");
 });
 
+app.get("/users", function(req, res) {
+});
+
 // Start the server
 app.listen(3000, ip.address, function() {
     console.log("Server started serving at: " + ip.address() + ":3000");
