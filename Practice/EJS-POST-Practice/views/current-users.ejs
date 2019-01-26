@@ -1,0 +1,19 @@
+<h2>Current User Database</h2>
+<% if (users_list.length == 0){ %>
+    <p>No User Signed Up Yet :(</p>
+<% } else { %>
+    <table>
+        <thead>
+            <th>User-Name</th>
+            <th>Email</th>
+            <th>Password</th>
+        </thead>
+    <% users_list.forEach(function(user) { %>
+        <tr>
+            <td><%= user.usr_name %></td>
+            <td><%= user.email %></td>>
+            <td><%= user.password %></td>
+        </tr>
+    <% }); %>
+    </table>
+<% } %>

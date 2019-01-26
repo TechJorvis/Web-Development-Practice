@@ -33,6 +33,7 @@ app.post("/addUser", function(req, res) {
 });
 
 app.get("/users", function(req, res) {
+    res.render("current-users", {users_list: users});
 });
 
 // Start the server
