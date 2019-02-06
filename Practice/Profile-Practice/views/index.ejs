@@ -1,4 +1,27 @@
 <% include partials/index-header.ejs %>
         <h1>Profile Viewer</h1>
         <hr>
+
+        <form action="/" method="GET">
+            <table>
+                <tr>
+                    <td>User ID</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Sign In</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
 <% include partials/index-footer.ejs %>
