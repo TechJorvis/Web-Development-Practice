@@ -6,11 +6,13 @@ const app = express();
 app.set("view engine", "ejs");
 
 app.get('/', function (req, res) {
-    res.send("Welcome to the Movie API app hompage");
+    res.render("index");
 });
 
 app.get("/results", function (req, res) {
-    request('http://www.omdbapi.com/?s=anime&apikey=thewdb', function (error, response, body) {
+    let query = req.query.search;
+    let url = 'http://www.omdbapi.com/?s=' + query + '&apikey=thewdb';
+    request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
             let data = JSON.parse(body);
             res.render("results", {

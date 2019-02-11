@@ -1,5 +1,9 @@
 <h1>Results Page</h1>
 
-<% data["Search"].forEach(function(anime) { %>
-    <li><%= anime["Title"] %></li>
-<% }); %>
+<ul>
+    <% data["Search"].forEach(function(anime) { %>
+        <li>
+            <%= anime["Title"] %>
+        </li>
+    <% }); %>
+</ul>
