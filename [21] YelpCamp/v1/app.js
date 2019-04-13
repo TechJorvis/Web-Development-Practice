@@ -5,7 +5,17 @@ const app = express();
 app.set("view engine", "ejs");
 
 app.get("/", function(req, res) {
-    res.send("Site under Construction");
+    res.render("landing");
+});
+
+app.get("/campgrounds", function(req, res) {
+    let campgrounds = [
+        {name: "Salmon Creek", image: ""},
+        {name: "Granite Hill", image: ""},
+        {name: "Dragon Nest", image: ""}
+    ];
+
+    res.render("campgrounds");
 });
 
 const port_nbr = 3000;
